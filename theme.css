@@ -1,0 +1,256 @@
+/* Warm Paper — a Claude-inspired, offline Obsidian theme. */
+body {
+  --font-interface-theme: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-text-theme: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Songti SC", "Noto Serif CJK SC", Georgia, serif;
+  --font-monospace-theme: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --font-text-size: 17px;
+  --line-height-normal: 1.75;
+  --file-line-width: 740px;
+  --paragraph-spacing: 1.15rem;
+  --h1-size: 2em;
+  --h2-size: 1.55em;
+  --h3-size: 1.25em;
+  --h4-size: 1.1em;
+  --h1-weight: 600;
+  --h2-weight: 600;
+  --h3-weight: 600;
+  --heading-spacing: 1.8em;
+  --inline-title-size: 2.25em;
+  --inline-title-weight: 500;
+  --radius-s: 5px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+  --input-radius: 7px;
+  --button-radius: 7px;
+  --tab-radius: 8px;
+  --checkbox-radius: 4px;
+  --code-size: 0.85em;
+  --code-radius: 8px;
+  --blockquote-border-thickness: 3px;
+  --blockquote-font-style: normal;
+  --link-decoration: underline;
+  --link-decoration-hover: underline;
+  --tag-size: 0.8em;
+  --tag-radius: 5px;
+  --tag-padding-x: 0.45em;
+  --tag-padding-y: 0.18em;
+  --table-header-weight: 600;
+}
+
+.theme-light {
+  --h1-color: #a64e35;
+  --h2-color: #876326;
+  --h3-color: #53734b;
+  --h4-color: #3b7778;
+  --h5-color: #476d91;
+  --h6-color: #7b5b8d;
+  --color-base-00: #faf9f5;
+  --color-base-05: #f6f4ee;
+  --color-base-10: #f0eee6;
+  --color-base-20: #e7e3d9;
+  --color-base-25: #dcd7cb;
+  --color-base-30: #c9c2b4;
+  --color-base-35: #aaa294;
+  --color-base-40: #8a8275;
+  --color-base-50: #716a60;
+  --color-base-60: #625b52;
+  --color-base-70: #514b43;
+  --color-base-100: #302d28;
+  --background-primary: #faf9f5;
+  --background-primary-alt: #f6f4ee;
+  --background-secondary: #f0eee6;
+  --background-secondary-alt: #ebe8df;
+  --background-modifier-border: #ded9ce;
+  --background-modifier-border-hover: #c8c0b2;
+  --background-modifier-border-focus: #ad593e;
+  --background-modifier-hover: rgba(80, 64, 43, 0.065);
+  --background-modifier-active-hover: rgba(173, 89, 62, 0.12);
+  --background-modifier-form-field: #fffdf8;
+  --background-modifier-cover: rgba(42, 35, 29, 0.35);
+  --text-normal: #302d28;
+  --text-muted: #716a60;
+  --text-faint: #81786b;
+  --text-on-accent: #fffdf9;
+  --text-accent: #a64e35;
+  --text-accent-hover: #853d29;
+  --text-selection: rgba(190, 112, 80, 0.22);
+  --text-highlight-bg: #f3dfad;
+  --color-accent-hsl: 15, 51%, 46%;
+  --color-accent: #b15a3a;
+  --color-accent-1: #a64e35;
+  --color-accent-2: #853d29;
+  --interactive-normal: #fffdf8;
+  --interactive-hover: #e9e5db;
+  --interactive-accent: #a64e35;
+  --interactive-accent-hover: #853d29;
+  --code-background: #f0ede5;
+  --code-normal: #69513f;
+  --code-comment: #787064;
+  --code-function: #945338;
+  --code-keyword: #875272;
+  --code-string: #507147;
+  --code-value: #9b6331;
+  --code-operator: #736352;
+  --code-property: #3e7074;
+  --code-tag: #945338;
+  --color-red: #b14540;
+  --color-orange: #ad593e;
+  --color-yellow: #967223;
+  --color-green: #53734b;
+  --color-cyan: #3b7778;
+  --color-blue: #476d91;
+  --color-purple: #7b5b8d;
+  --color-pink: #a55275;
+  --paper-accent-rgb: 166, 78, 53;
+}
+
+.theme-dark {
+  --h1-color: #e0a284;
+  --h2-color: #dfc080;
+  --h3-color: #abc59b;
+  --h4-color: #94c2bf;
+  --h5-color: #9cbada;
+  --h6-color: #bca5d0;
+  --color-base-00: #262522;
+  --color-base-05: #292824;
+  --color-base-10: #211f1d;
+  --color-base-20: #38352f;
+  --color-base-25: #454038;
+  --color-base-30: #544e44;
+  --color-base-35: #6c6459;
+  --color-base-40: #8a8175;
+  --color-base-50: #a69d90;
+  --color-base-60: #b7aea2;
+  --color-base-70: #d1c9bd;
+  --color-base-100: #e9e3d8;
+  --background-primary: #262522;
+  --background-primary-alt: #292824;
+  --background-secondary: #211f1d;
+  --background-secondary-alt: #1d1c19;
+  --background-modifier-border: #403c35;
+  --background-modifier-border-hover: #5a5247;
+  --background-modifier-border-focus: #d99574;
+  --background-modifier-hover: rgba(234, 219, 196, 0.065);
+  --background-modifier-active-hover: rgba(217, 149, 116, 0.13);
+  --background-modifier-form-field: #2d2b26;
+  --background-modifier-cover: rgba(10, 9, 8, 0.65);
+  --text-normal: #e9e3d8;
+  --text-muted: #b3aa9c;
+  --text-faint: #a1988a;
+  --text-on-accent: #241d18;
+  --text-accent: #e0a284;
+  --text-accent-hover: #f0bea4;
+  --text-selection: rgba(217, 149, 116, 0.26);
+  --text-highlight-bg: #66532c;
+  --color-accent-hsl: 20, 57%, 65%;
+  --color-accent: #d99574;
+  --color-accent-1: #e0a284;
+  --color-accent-2: #f0bea4;
+  --interactive-normal: #35312b;
+  --interactive-hover: #423c33;
+  --interactive-accent: #d99574;
+  --interactive-accent-hover: #e0a284;
+  --code-background: #201f1c;
+  --code-normal: #d7c3ad;
+  --code-comment: #a1988a;
+  --code-function: #e0a284;
+  --code-keyword: #c9a2c0;
+  --code-string: #abc59b;
+  --code-value: #dfbb80;
+  --code-operator: #b6aa98;
+  --code-property: #94c2bf;
+  --code-tag: #e0a284;
+  --color-red: #e39187;
+  --color-orange: #e0a284;
+  --color-yellow: #dfc080;
+  --color-green: #abc59b;
+  --color-cyan: #94c2bf;
+  --color-blue: #9cbada;
+  --color-purple: #bca5d0;
+  --color-pink: #d7a0b8;
+  --paper-accent-rgb: 224, 162, 132;
+}
+
+body.theme-light,
+body.theme-dark {
+  --link-color: var(--text-accent);
+  --link-color-hover: var(--text-accent-hover);
+  --link-external-color: var(--text-accent);
+  --link-external-color-hover: var(--text-accent-hover);
+  --nav-item-color: var(--text-muted);
+  --nav-item-color-active: var(--text-normal);
+  --nav-item-background-active: rgba(var(--paper-accent-rgb), 0.12);
+  --nav-item-weight-active: 600;
+  --nav-item-background-hover: var(--background-modifier-hover);
+  --tab-text-color-active: var(--text-normal);
+  --tab-background-active: var(--background-primary);
+  --titlebar-background: var(--background-secondary);
+  --titlebar-background-focused: var(--background-secondary);
+  --ribbon-background: var(--background-secondary);
+  --divider-color: var(--background-modifier-border);
+  --divider-color-hover: var(--interactive-accent);
+  --blockquote-border-color: var(--text-accent);
+  --blockquote-color: var(--text-muted);
+  --blockquote-background-color: rgba(var(--paper-accent-rgb), 0.045);
+  --tag-color: var(--text-accent);
+  --tag-color-hover: var(--text-accent-hover);
+  --tag-background: rgba(var(--paper-accent-rgb), 0.09);
+  --tag-background-hover: rgba(var(--paper-accent-rgb), 0.16);
+  --table-border-color: var(--background-modifier-border);
+  --table-header-background: var(--background-secondary);
+  --table-row-background-hover: var(--background-modifier-hover);
+  --hr-color: var(--background-modifier-border);
+  --checkbox-color: var(--interactive-accent);
+  --checkbox-color-hover: var(--interactive-accent-hover);
+  --checkbox-marker-color: var(--text-on-accent);
+  --checklist-done-color: var(--text-muted);
+  --indentation-guide-color: var(--background-modifier-border);
+  --indentation-guide-color-active: var(--text-accent);
+  --graph-line: var(--background-modifier-border);
+  --graph-node: var(--text-muted);
+  --graph-node-focused: var(--text-accent);
+  --graph-node-tag: var(--color-green);
+}
+
+.markdown-rendered pre {
+  border: 1px solid var(--background-modifier-border);
+}
+
+.markdown-rendered blockquote {
+  padding: 0.5em 1em;
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+}
+
+.callout {
+  border-radius: var(--radius-m);
+  border-width: 1px;
+  border-color: rgba(var(--callout-color), 0.22);
+  --callout-padding: 14px 18px;
+  --callout-title-weight: 600;
+}
+
+.callout[data-callout="note"] { --callout-color: var(--paper-accent-rgb); }
+
+.markdown-rendered a,
+.cm-hmd-internal-link,
+.cm-link {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+  color: var(--text-accent);
+}
+
+.nav-file-title.is-active {
+  border-radius: var(--radius-s);
+}
+
+.search-result-file-matched-text {
+  color: var(--text-normal);
+  background: var(--text-highlight-bg);
+}
+
+@media (max-width: 600px) {
+  body { --font-text-size: 16px; --h1-size: 1.8em; --inline-title-size: 1.9em; }
+}
